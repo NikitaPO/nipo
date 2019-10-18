@@ -45,6 +45,10 @@ button {
   cursor: pointer;
 }
 
+button {
+  display: inline-block;
+}
+
 body {
   font-family: $rr;
   color: #000;
@@ -78,7 +82,6 @@ input:focus {
 *::selection {
   //выделение на сайте
 }
-
 //header
 
 .header__inner {
@@ -95,13 +98,13 @@ input:focus {
   margin-right: 85px;
 }
 
-.header__contacts-phone,
-.header__contacts-mail {
+.header__contacts-mail,
+.header__contacts-phone {
   position: relative;
 }
 
-.header__contacts-phone::before,
-.header__contacts-mail::before {
+.header__contacts-mail::before,
+.header__contacts-phone::before {
   font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
   font-weight: 900;
   position: absolute;
@@ -139,13 +142,71 @@ input:focus {
   content: '';
   border-bottom: 3px solid rgba($blue, .5);
   width: 100%;
-  transform: translateX(-100%);
-  transition: transform .3s;
+  transform: translateX(-110%);
+  transition: transform 0.3s;
   bottom: 0;
 }
 
 .header__menu-item:hover::before {
   transform: translateX(0);
+}
+//slider
+
+.slider__item-content {
+  text-align: center;
+  position: relative;
+}
+
+.slider__item {
+  border: 1px solid #000;
+  padding-bottom: 27px;
+  color: #fff;
+  position: relative;
+}
+
+.slider__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+
+.slider__item-title {
+  font: 48px $rm;
+  margin-bottom: 34px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.slider__item-content {
+  padding-top: 206px;
+  max-width: 636px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider__item-text {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  font: 24px $rr;
+  line-height: 29px;
+  margin-bottom: 106px;
+}
+
+.def__btn {
+  display: inline-block;
+  color: #fff;
+  font: 24px $rb;
+  padding: 18px 65px;
+  background-color: $blue-btn;
+  border-radius: 30px;
+}
+
+.slider__img-mouse {
+  position: relative;
+  margin-top: 64px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
