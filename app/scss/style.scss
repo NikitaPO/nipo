@@ -39,14 +39,16 @@ p {
 
 a,
 button {
+  color: #000;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
 body {
-  font-family: $fn-mr;
-  color: $black-text;
+  font-family: $rr;
+  color: #000;
+  font-size: 14px;
   line-height: 23px;
   font-weight: 400;
 }
@@ -86,7 +88,64 @@ input:focus {
 }
 
 .header__contacts {
-  
+  font-size: 24px;
+}
+
+.header__contacts-phone {
+  margin-right: 85px;
+}
+
+.header__contacts-phone,
+.header__contacts-mail {
+  position: relative;
+}
+
+.header__contacts-phone::before,
+.header__contacts-mail::before {
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900;
+  position: absolute;
+  font-size: 29px;
+  color: $blue;
+  top: -2px;
+  left: -41px;
+}
+
+.header__contacts-phone::before {
+  content: '\f879';
+}
+
+.header__contacts-mail::before {
+  content: '\f0e0';
+}
+
+.header__menu {
+  font: 28px $rm;
+}
+
+.header__menu-item + .header__menu-item {
+  margin-left: 40px;
+}
+
+.header__menu-item {
+  height: 45px;
+  position: relative;
+  padding-top: 6px;
+  overflow: hidden;
+}
+
+.header__menu-item::before {
+  position: absolute;
+  content: '';
+  border-bottom: 3px solid rgba($blue, .5);
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform .3s;
+  bottom: 0;
+}
+
+.header__menu-item:hover::before {
+  transform: translateX(0);
 }
 
 
