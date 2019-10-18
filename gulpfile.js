@@ -38,7 +38,8 @@ gulp.task('css-libs', function() {
       'node_modules/normalize.css/normalize.css',
       'node_modules/animate.css/animate.min.css',
       'node_modules/magnific-popup/dist/magnific-popup.css',
-      'node_modules/slick-carousel/slick/slick.css'
+      'node_modules/slick-carousel/slick/slick.css',
+      'app/libs/font-awesome/all.min.css'
     ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -99,6 +100,9 @@ gulp.task('export', async function() {
 
   let buildVideo = gulp.src('app/video/**/*.*')
     .pipe(gulp.dest('dist/video'))
+
+  let buildLibs = gulp.src('app/libs/**/*.*')
+    .pipe(gulp.dest('dist/libs'))
 });
 
 gulp.task('build', gulp.series('del', 'export'));

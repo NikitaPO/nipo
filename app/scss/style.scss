@@ -67,7 +67,7 @@ input:focus {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1780px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -75,6 +75,18 @@ input:focus {
 
 *::selection {
   //выделение на сайте
+}
+
+//header
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contacts {
+  
 }
 
 
