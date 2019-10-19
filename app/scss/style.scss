@@ -89,6 +89,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .header__logo {
@@ -129,6 +130,11 @@ input:focus {
 
 .header__menu {
   font: 28px $rm;
+}
+
+.header__menu-icon {
+  display: none;
+  font-size: 40px;
 }
 
 .header__menu-item + .header__menu-item {
