@@ -1,15 +1,4 @@
 @media screen and (max-width: 1500px) {
-  .header__contacts {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header__contacts-phone {
-    margin: 0 0 20px 0;
-  }
-}
-
-@media screen and (max-width: 1360px) {
   .header__menu {
     display: none;
     position: absolute;
@@ -43,9 +32,31 @@
     display: none;
   }
 }
+@media screen and (max-width: 1200px) {
+  .advantages__items {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 860px) {
   .def__btn {
     font-size: 16px;
+  }
+
+  .def__title::before,
+  .def__title::after {
+    width: 40px;
+  }
+
+  .def__title::after {
+    right: -80px;
+  }
+
+  .def__title::before {
+    left: -80px;
+}
+
+  .def__title {
+    font-size: 30px;
   }
 
   .header__contacts {
@@ -67,16 +78,36 @@
     padding-bottom: 110px;
   }
 }
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__contacts-phone {
+    margin: 0 0 20px 0;
+  }
+}
 @media screen and (max-width: 576px) {
   .header__contacts {
     display: none;
   }
+}
 
+@media screen and (max-width: 500px) {
+  .def__title::before,
+  .def__title::after {
+    display: none;
+  }
+
+  .def__title {
+    border-bottom: 4px solid $blue;
+    padding-bottom: 20px;
+  }
 }
 
 
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1500px) {
   .header__menu {
     display: block;
   }
